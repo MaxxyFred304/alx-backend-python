@@ -7,8 +7,11 @@ async def wait_random(max_delay=10):
     await asyncio.sleep(delay)
     return delay
 
-# Example usage
-print(asyncio.run(wait_random()))
-print(asyncio.run(wait_random(5)))
-print(asyncio.run(wait_random(15)))
+async def main():
+    tasks = [wait_random(), wait_random(5), wait_random(15)]
+    results = await asyncio.gather(*tasks)
+    for result in results:
+        print(result)
+
+asyncio.run(main())
 
