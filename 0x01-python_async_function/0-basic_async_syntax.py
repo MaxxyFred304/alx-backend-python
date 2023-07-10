@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
+
+"""
+This module demonstrates basic usage of asynchronous coroutines in Python.
+"""
+
 import asyncio
 import random
+
 
 async def wait_random(max_delay: float = 10) -> float:
     """
     An asynchronous coroutine that waits for a random delay between 0 and max_delay (inclusive) seconds.
-
+    
     Args:
         max_delay (float): The maximum delay value in seconds. Defaults to 10.
 
@@ -26,4 +32,5 @@ async def main() -> None:
     print(await wait_random(15))
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
