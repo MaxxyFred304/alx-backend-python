@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-""" Takes list input of floats, returns sum """
+""" Takes list input of of integers and floats, returns float """
 
-from typing import List
+from typing import List, Union
 
 
-def sum_list(input_list: List[float]) -> float:
-    """ Sums list of floats """
-    return sum(input_list)
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
+    """ Sums list of of integers and floats """
+    return sum(mxd_lst)
